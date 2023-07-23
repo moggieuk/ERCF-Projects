@@ -23,11 +23,9 @@ The first section specifies the type of MMU and is used by Happy Hare to adjust 
 mmu_vendor: ERCF			# MMU family
 mmu_version: 1.1			# MMU hardware version number (add mod suffix documented above)
 mmu_num_gates: 9			# Number of selector gates
-```
 
 The servo configuration allos for up to three positions but some designs (e.g. ERCF v1.1) only require `up`/`down`.  If `move` is not used then comment it out or set it to the same value as `up`.  The servo duraction is the lemght of PWM burst.  Most digital servos only require a short 0.1 second or so but slower analog servos may require longer (0.4 - 0.5s).  Be very careful if you use the `servo_active_down` option because it will can strain your electronics.
 
-```yml
 # Servo configuration  -----------------------------------------------------------------------------------------------------
 #
 # Angle of the servo in three named positions:
@@ -60,11 +58,9 @@ log_file_level: 3			# Can also be set to -1 to disable log file completely
 log_statistics: 1 			# 1 to log statistics on every toolchange (default), 0 to disable (but still recorded)
 log_visual: 2				# 1 log visual representation of filament, 2 compact form (default) , 0 disable
 log_startup_status: 1			# Whether to log tool to gate status on startup, 1 = summary (default), 2 = full, 0 = disable
-```
 
 All Happy Hare speeds can be configured in this section.  Most are self-explanatory and are separated into gear stepper speeds, speeds inside of the extruder (either just extruder motor or when synced with gear stepper) and selector movement.
 
-```yml
 # Movement speeds ----------------------------------------------------------------------------------------------------------
 #
 # Long moves are faster than the small ones and used for the bulk of the bowden movement. Note that you can set two fast load
