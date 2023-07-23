@@ -120,11 +120,9 @@ log_file_level: 3			# Can also be set to -1 to disable log file completely
 log_statistics: 1 			# 1 to log statistics on every toolchange (default), 0 to disable (but still recorded)
 log_visual: 2				# 1 log visual representation of filament, 2 compact form (default) , 0 disable
 log_startup_status: 1			# Whether to log tool to gate status on startup, 1 = summary (default), 2 = full, 0 = disable
-```
 
 All Happy Hare speeds can be configured in this section.  Most are self-explanatory and are separated into gear stepper speeds, speeds inside of the extruder (either just extruder motor or when synced with gear stepper) and selector movement.
 
-```yml
 # Movement speeds ----------------------------------------------------------------------------------------------------------
 #
 # Long moves are faster than the small ones and used for the bulk of the bowden movement. Note that you can set two fast load
