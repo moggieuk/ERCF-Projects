@@ -101,6 +101,26 @@ For more information on the bowden correct move, read about the loading sequence
 bowden_apply_correction: 0		# 1 to enable, 0 disabled (default)
 bowden_load_tolerance: 15.0		# How close in mm the correction moves will attempt to get to target
 bowden_num_moves: 1			# Number of separate fast moves to make when loading or unloading bowden (>1 if you have TTC errors)
+# Bowden tube loading/unloading --------------------------------------------------------------------------------------------
+#
+# In addition to different bowden loading speeds for buffer and non-buffered filament it is possible to detect missed steps
+# caused by "jerking" on a heavy spool. If bowden correction is enabled the driver with "believe" the encoder reading and
+# make correction moves to bring the filament to within the 'load_bowden_tolerance' of the end of bowden position
+# (this does require a reliable encoder and is not recommended for very high speed loading >200mm/s)
+#
+bowden_apply_correction: 0		# 1 to enable, 0 disabled (default)
+bowden_load_tolerance: 15.0		# How close in mm the correction moves will attempt to get to target
+bowden_num_moves: 1			# Number of separate fast moves to make when loading or unloading bowden (>1 if you have TTC errors)
+# Bowden tube loading/unloading --------------------------------------------------------------------------------------------
+#
+# In addition to different bowden loading speeds for buffer and non-buffered filament it is possible to detect missed steps
+# caused by "jerking" on a heavy spool. If bowden correction is enabled the driver with "believe" the encoder reading and
+# make correction moves to bring the filament to within the 'load_bowden_tolerance' of the end of bowden position
+# (this does require a reliable encoder and is not recommended for very high speed loading >200mm/s)
+#
+bowden_apply_correction: 0		# 1 to enable, 0 disabled (default)
+bowden_load_tolerance: 15.0		# How close in mm the correction moves will attempt to get to target
+bowden_num_moves: 1			# Number of separate fast moves to make when loading or unloading bowden (>1 if you have TTC errors)
 ```
 
 This section controls the optional extruder homing step. The `extruder_homing_endstop` is either a real endstop name or the string "collision" which causes Happy Hare to "feel" for the extruder entrance.  If other options dictate this homing step it will automatically be performed, however it is possible to force it even when not strickly needed by setting the `extruder_force_homing: 1`.
